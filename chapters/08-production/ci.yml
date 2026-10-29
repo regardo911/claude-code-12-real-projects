@@ -1,0 +1,20 @@
+# chapter 8 (ch08:194-213), verbatim from the book. Goes in YOUR project as .github/workflows/ci.yml.
+# It runs "npm run lint", so your package.json needs a "lint" script (the Path B prompt at ch08:29 does not add one).
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test

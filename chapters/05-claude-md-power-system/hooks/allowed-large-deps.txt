@@ -1,0 +1,2 @@
+# chapter 5 (ch05:242). bundle-size-guardian.sh skips every package named here.
+# One package name per line, exactly as it appears in package.json.

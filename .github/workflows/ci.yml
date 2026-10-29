@@ -1,0 +1,32 @@
+# This repo's own CI. The book's ci.yml (chapter 8) is in chapters/08-production/ and
+# belongs in your project, not here: this repo has no package.json.
+name: tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: shellcheck
+        if: runner.os == 'Linux'
+        run: shellcheck install.sh tests/run.sh chapters/05-claude-md-power-system/hooks/*.sh chapters/05-claude-md-power-system/hooks/pre-commit
+      - name: tests (bash ${{ runner.os == 'macOS' && '3.2' || '5' }})
+        run: |
+          bash --version | head -1
+          bash tests/run.sh | tee test-output.txt
+          grep -qE '^[1-9][0-9]* passed, 0 failed' test-output.txt
+      - name: the first README command, on an empty project
+        run: |
+          mkdir -p /tmp/my-project && git -C /tmp/my-project init -q
+          ./install.sh /tmp/my-project
+          test -x /tmp/my-project/.git/hooks/pre-commit

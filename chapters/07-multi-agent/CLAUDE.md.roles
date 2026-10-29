@@ -1,0 +1,21 @@
+<!-- Chapter 7 (ch07:58-78), verbatim from the book. Append it to the CLAUDE.md of the project all three agents share. -->
+
+## Multi-Agent Roles
+
+### Agent 1: Researcher
+- Reads from: external sources, docs, APIs
+- Writes to: research/ directory
+- Never modifies: src/, tests/
+- Signal file: research/DONE.md (create when finished)
+
+### Agent 2: Builder
+- Reads from: research/, src/
+- Writes to: src/, config/
+- Never modifies: tests/, research/
+- Signal file: src/BUILD_COMPLETE.md
+
+### Agent 3: Reviewer
+- Reads from: src/, tests/
+- Writes to: tests/, reviews/
+- Never modifies: src/ (only flags issues)
+- Signal file: reviews/REVIEW_COMPLETE.md

@@ -1,0 +1,14 @@
+#!/bin/bash
+# pre-commit: written for this repo from chapter 5 (ch05:159-165). install.sh copies it to
+# .git/hooks/pre-commit. Git runs it on every commit, from you or from Claude Code.
+# It runs each executable .claude/hooks/*.sh in name order and stops at the first one
+# that fails, with that hook's exit code. A hook without the execute bit is skipped:
+# chmod +x .claude/hooks/<name>.sh turns it on, chmod -x turns it off.
+
+cd "$(git rev-parse --show-toplevel)" || exit 1
+
+for hook in .claude/hooks/*.sh; do
+  [ -x "$hook" ] || continue
+  "$hook" || exit $?
+done
+exit 0

@@ -1,0 +1,39 @@
+<!-- CLAUDE.md: from CLAUDE.md.template, chapter 5 build step (ch05:401-439), verbatim from the book. Replace every [bracket] with your project's facts, keep it under 200 lines (ch05:147). -->
+
+# Project: [Your Project Name]
+
+## Tech Stack
+- Language: [e.g., TypeScript 5.x, strict mode, no `any` types]
+- Framework: [e.g., Next.js 14 App Router]
+- Styling: [e.g., Tailwind CSS 3.x, no custom CSS files, no inline styles]
+- Database: [e.g., Supabase PostgreSQL, accessed via lib/db/ modules]
+- Testing: [e.g., Vitest for unit, Playwright for e2e]
+- Package manager: [e.g., pnpm, do not use npm or yarn]
+
+## File Structure
+- [Map every major directory with its purpose]
+- [Include naming conventions for each: PascalCase, camelCase, kebab-case]
+- [Specify where tests live relative to source files]
+
+## Coding Conventions
+- [5-10 specific, measurable rules]
+- [Include line length, function length, file length limits]
+- [Specify import ordering if you care about it]
+- [Specify error handling patterns with examples if needed]
+
+## When Writing Tests
+- [Minimum coverage expectations]
+- [Test naming pattern]
+- [What to mock vs. what to test against real implementations]
+- [Any setup/teardown patterns specific to your stack]
+
+## Known Issues
+- [Bugs, quirks, workarounds that Claude Code would waste time on]
+- [Environment-specific gotchas: "runs on port 3001, not 3000"]
+- [Third-party API limitations: "Stripe webhook requires raw body"]
+
+## Do NOT
+- [Every guardrail you need, one per line]
+- [Start with: do not install new dependencies without asking]
+- [Include: do not modify database schema, auth flow, CI config]
+- [Add any project-specific no-go zones]

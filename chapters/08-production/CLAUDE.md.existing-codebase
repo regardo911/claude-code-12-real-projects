@@ -1,0 +1,20 @@
+<!-- Chapter 8 (ch08:123-150), verbatim from the book. The three sections an existing codebase needs. Append them to its CLAUDE.md and rewrite each line with your own paths. -->
+
+## Architecture
+- API routes: src/api/ (Express, REST)
+- Database: PostgreSQL via Prisma ORM, schema in prisma/schema.prisma
+- Auth: Clerk, middleware in src/middleware/auth.js
+- Frontend: Next.js, pages in src/app/
+- Background jobs: Bull queue, workers in src/workers/
+- Config: .env for secrets, src/config/ for app config
+
+## Conventions
+- All API responses use {success: boolean, data: any, error: string} shape
+- Database queries go through service layer (src/services/), never called directly from routes
+- Errors use custom AppError class (src/utils/errors.js)
+- All new code must have corresponding test file in tests/ with same path structure
+
+## Do Not Modify
+- src/legacy/: old payment system, being deprecated, do not refactor
+- migrations/: never generate or run migrations without explicit approval
+- .env: never read or modify environment files

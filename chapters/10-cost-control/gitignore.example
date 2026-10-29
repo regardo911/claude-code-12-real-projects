@@ -1,0 +1,24 @@
+# chapter 10 (ch10:138-159), verbatim from the book. Merge it into YOUR project's .gitignore.
+# Grep honours .gitignore, so what it lists stays out of Claude Code's searches (ch10:136).
+# Careful with the last block: fixtures/ and *.csv also drop test fixtures and data you want in git.
+# The chapter's next paragraph (ch10:161) says to name such files in your prompt instead. Delete those lines if you need the files.
+# Build output
+dist/
+build/
+.next/
+out/
+
+# Dependencies
+node_modules/
+vendor/
+.venv/
+
+# Generated code (the big context win)
+*.generated.ts
+*.generated.js
+prisma/generated/
+
+# Large data dumps
+*.csv
+fixtures/
+seed-data/

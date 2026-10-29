@@ -1,0 +1,9 @@
+<!-- Chapter 11 (ch11:180-188), verbatim from the book. Append it to every project's CLAUDE.md. It steers Claude Code; the deny rules in settings.deny.json are what block a read (ch11:190). -->
+
+## Safety Rules
+- NEVER delete files without explicit user confirmation listing each file
+- NEVER modify .env files without showing the full diff first
+- NEVER run DROP, DELETE, or UPDATE queries on any database without confirmation
+- NEVER execute shell commands that modify files outside the project directory
+- If asked to "clean up" or "remove unused", list what you would remove and WAIT for approval
+- Always preserve existing .gitignore patterns when creating new files
