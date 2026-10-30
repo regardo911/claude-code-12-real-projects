@@ -1,5 +1,4 @@
-<!-- Chapter 9, verbatim from the book. The invoice-reminder Micro-SaaS, phase by phase.
-     Not financial or business advice: the revenue figures in chapter 9 are the author's examples and do not predict yours. Twilio, Railway, Stripe fees and your domain cost real money. See DISCLAIMER.md. -->
+<!-- Chapter 9, verbatim from the book. The invoice-reminder Micro-SaaS, phase by phase. -->
 
 # Chapter 9 prompts: a Micro-SaaS in a weekend
 
