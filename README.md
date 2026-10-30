@@ -2,13 +2,11 @@
 
 **Copy the book's Claude Code setup into your own project with one command. The prompts are filed by chapter, ready to paste.**
 
-Companion to the book *Claude Code - Ship 12 Real Projects in 30 Days* · [youcanbuildthings.com](https://youcanbuildthings.com)
+Companion to the book *Claude Code - Ship 12 Real Projects in 30 Days* · [youcanbuildthings.com/books/claude-code-ship-12](https://youcanbuildthings.com/books/claude-code-ship-12)
 
 [![tests](https://github.com/regardo911/claude-code-12-real-projects/actions/workflows/ci.yml/badge.svg)](https://github.com/regardo911/claude-code-12-real-projects/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 This repo holds the files the book has you write: a CLAUDE.md, two skills (slash commands you type in Claude Code), four git hooks (scripts that run when you commit) and every prompt, filed by chapter. `install.sh` puts the chapter 5 setup into a project you name. Two terms you'll meet first: **CLAUDE.md** is the instructions file Claude Code reads at the start of every session (the chapter 5 folder). An **MCP server** is a connector to GitHub, a database or the web (the chapter 6 folder). A cite like `ch05:399` means chapter 5, line 399 of the book's text; your copy has no line numbers, so read it as "this passage of chapter 5".
-
-> **Educational, not business advice.** The earnings in chapters 1, 9 and 12 are the author's examples. They won't predict yours, and the chapter 9 services cost real money. See [DISCLAIMER.md](DISCLAIMER.md).
 
 ## Start here
 
